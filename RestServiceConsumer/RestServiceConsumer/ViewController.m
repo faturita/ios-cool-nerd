@@ -9,7 +9,8 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+- (IBAction)click:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *buttonzero;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @end
 
@@ -113,5 +114,8 @@
 -(void)change:(NSString*)val {
     _textField.text =val;
     //[_textField setText:[json objectForKey:@"username"]];
+}
+- (IBAction)click:(id)sender {
+    [_buttonzero setBackgroundColor: [UIColor colorWithRed:0x33/255.0 green:0 blue:0x99/255.0 alpha:1.0]];
 }
 @end
